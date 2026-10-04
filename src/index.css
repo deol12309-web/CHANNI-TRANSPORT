@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-black: #0B0B0B;
+    --gold: #C9A96E;
+    --gold-light: #E4C88E;
+    --gold-dark: #9E7D3B;
+    --ivory: #FAF7F2;
+    --card-bg: rgba(18, 18, 18, 0.85);
+    --border-gold: rgba(201, 169, 110, 0.25);
+  }
+
+  html {
+    background-color: #0B0B0B;
+    color: #FAF7F2;
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'Inter', 'Noto Sans Devanagari', 'Noto Sans Gurmukhi', system-ui, -apple-system, sans-serif;
+    background-color: #0B0B0B;
+    color: #FAF7F2;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', 'Noto Sans Devanagari', 'Noto Sans Gurmukhi', Georgia, serif;
+  }
+}
+
+/* Lenis Smooth Scrolling */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Luxury Glassmorphism */
+.glass-card {
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(201, 169, 110, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(201, 169, 110, 0.15);
+  transform: translateY(-2px);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FAF7F2 0%, #C9A96E 50%, #E4C88E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(201, 169, 110, 0.2);
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #C9A96E 50%, transparent 100%);
+}
+
+/* Noise overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(201, 169, 110, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A96E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E4C88E;
+}
